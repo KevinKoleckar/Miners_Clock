@@ -54,7 +54,7 @@ public class SettingsPage extends Activity implements OnClickListener {
         remoteViews.setImageViewBitmap(R.id.imageView_txt, bmp);
  
         // set a background
-        remoteViews.setImageViewResource(R.id.imageView_bg, R.drawable.theme0);
+        remoteViews.setImageViewResource(R.id.imageView_bg, R.drawable.heart0);
  
         AppWidgetManager appWidgetManager = AppWidgetManager
                 .getInstance(SettingsPage.this);

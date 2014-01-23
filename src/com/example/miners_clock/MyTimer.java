@@ -50,20 +50,20 @@ public class MyTimer {
     }
  
     public Bitmap buildUpdate(String time) {
-        int bmpWidth = 250;
-        int bmpHeight = 100;
+        int bmpWidth = 2500;
+        int bmpHeight = 1000;
         Bitmap myBitmap = Bitmap.createBitmap(bmpWidth, bmpHeight,
                 Bitmap.Config.ARGB_8888);
         Canvas myCanvas = new Canvas(myBitmap);
         Paint paint = new Paint();
         Typeface clock = Typeface.createFromAsset(context.getAssets(),
-                "digital-7.ttf");
+                "love-letters.ttf");
         paint.setAntiAlias(true);
         paint.setSubpixelText(true);
         paint.setTypeface(clock);
         paint.setStyle(Paint.Style.FILL);
-        paint.setColor(Color.RED);
-        paint.setTextSize(70); 
+        paint.setColor(Color.WHITE);
+        paint.setTextSize(700); 
         paint.setTextAlign(Align.CENTER);
         myCanvas.drawText(time, bmpWidth / 2, bmpHeight / 2 + (bmpHeight / 4),
                 paint);
@@ -75,10 +75,9 @@ public class MyTimer {
         int hour = Integer
                 .parseInt(convertToNormal(c.get(Calendar.HOUR_OF_DAY)));
         int minute = c.get(Calendar.MINUTE);
-        int seconds = c.get(Calendar.SECOND);
+        //int seconds = c.get(Calendar.SECOND);
         return new StringBuilder().append(pad(hour)).append(":")
-                .append(pad(minute)).append(":").append(pad(seconds))
-                .toString();
+                .append(pad(minute)).toString();
     }
  
     private static String pad(int c) {

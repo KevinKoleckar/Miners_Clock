@@ -26,7 +26,7 @@ public class MyAppWidgetProvider extends AppWidgetProvider {
        // <span id="IL_AD10" class="IL_AD">Schedule</span> the alarm!
        AlarmManager am = (AlarmManager) context
                .getSystemService(Context.ALARM_SERVICE);
-       am.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, firstTime, 1000,
+       am.setRepeating(AlarmManager.ELAPSED_REALTIME, firstTime, 60000,
                sender);
 
    }
